@@ -1,0 +1,19 @@
+.list-group{
+    &__item{
+      gap: 10px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    .list-group__item--completed{
+        text-decoration: line-through;
+        color: #999;
+    }
+    .dev{
+        display: flex;
+         align-items: center;
+          gap: 8px;    }
+
+
+
+}

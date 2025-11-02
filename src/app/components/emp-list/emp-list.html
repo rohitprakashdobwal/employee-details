@@ -1,0 +1,13 @@
+<p>emp-list works!</p>
+    <li appEmployeeDirective class="list-group_item" [isCompleted]="emp().gender">
+    <div  style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" [checked]="emp().gender" (change)="this.empClicked()"/>
+         <h4 style="margin: 0;">{{emp().empId}}</h4>
+         <h4 style="margin: 0;">{{emp().firstName}}</h4>
+         <h4 style="margin: 0;">{{emp().lastName}}</h4>
+         <h4 style="margin: 0;">{{emp().email}}</h4>
+         <h4 style="margin: 0;">{{emp().address}}</h4>
+         
+    </div> 
+
+  </li> 

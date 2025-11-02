@@ -1,0 +1,10 @@
+<!-- <p>Home works!!!!!</p> -->
+<!-- <app-greeting [message]="'Hello greeting'" /> -->
+<app-greeting [message]="homeMessage()" />
+
+<app-counter></app-counter>
+
+<input 
+    type="text"  
+    (keyup)="keyUpHandler($event) " 
+    placeholder="Enter message for greeting component" />
