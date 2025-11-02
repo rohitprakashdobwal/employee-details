@@ -8,6 +8,13 @@ export const routes: Routes = [
 }
 ,
 {
+    path: 'greeting',
+    //pathMatch: 'full',
+    loadComponent: () => import('./components/greeting/greeting').then(m => m.Greeting)
+}
+
+,
+{
     path: 'todos',
     //pathMatch: 'full',
     loadComponent: () => import('./todos/todos').then(m => m.Todos)

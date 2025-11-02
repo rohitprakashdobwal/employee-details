@@ -4,24 +4,24 @@
 
   <!-- <p *ngIf="!employees() || employees().length === 0">Loading.....{{loading()}}</p> -->
 
-  @if (!employees().length   ) 
+  @if (!employees().length )
   {
-    <p>Loading.....{{loading()}}</p>
-   
+  <p>Loading.....{{loading()}}</p>
+
   }
 
-  <form >
-<label >Search Employees</label>
-<input  name="serchText" [(ngModel)]="serchText" placeholder="Search by name or email" />
+  <form>
+    <label>Search Employees</label>
+    <input name="serchText" [(ngModel)]="serchText" placeholder="Search by name or email" />
 
   </form>
 
 
 
-    @for (emp of employees() | empPipe : serchText(); track $index) {
+  @for (emp of employees() | empPipe : serchText(); track $index) {
 
-      <app-emp-list (empTogle)="updateEmployee($event)" [emp]="emp"></app-emp-list>
-    <!-- <li  class="list-group_item">
+  <app-emp-list (empTogle)="updateEmployee($event)" [emp]="emp"></app-emp-list>
+  <!-- <li  class="list-group_item">
     <div  style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" [value]="false"/>
          <h4 style="margin: 0;">{{item.empId}}</h4>
          <h4 style="margin: 0;">{{item.firstName}}</h4>
@@ -32,9 +32,6 @@
     </div> 
 
   </li>  -->
-}
-  
+  }
+
 </ul>
-
-
-
