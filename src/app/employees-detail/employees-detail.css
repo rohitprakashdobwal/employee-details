@@ -1,0 +1,81 @@
+.employee-details-container {
+  padding: 20px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  background: #007bff;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.employee-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.employee-detail-table th,
+.employee-detail-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+}

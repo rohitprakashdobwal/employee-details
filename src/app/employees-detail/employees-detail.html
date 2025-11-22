@@ -1,0 +1,71 @@
+<div class="employees-detail">
+
+    <h2>Employee Details</h2>
+
+    <button class="add-btn" (click)="openAndAddForm()">Add Employee</button>
+
+    @if (showForm)
+    {
+    <form class="employee-form" (ngSubmit)="saveEmployee()">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="employeeAddRequest.name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="employeeAddRequest.email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" [(ngModel)]="employeeAddRequest.phone" name="phone" required />
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" [(ngModel)]="employeeAddRequest.department" name="department" required />
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" [(ngModel)]="employeeAddRequest.salary" name="salary" required />
+
+        <div>
+            <button type="submit" class="save-btn">Save</button>
+            <button type="button" class="cancel-btn" (click)="cancelForm()">Cancel</button>
+        </div>
+
+
+    </form>
+
+    }
+
+    @if (employees && employees.length >0) {
+
+    <table class="employee-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for ( emp of employees; track emp.id)
+            {
+            <tr>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.email }}</td>
+                <td>{{ emp.phone }}</td>
+                <td>{{ emp.department }}</td>
+                <td>{{ emp.salary | currency:'INR' }}</td>
+
+                <td>
+                    <button class="edit-btn" (click)="editEmployee(emp)">Edit</button>
+                    <button class="delete-btn" (click)="deleteEmployee(emp.id)">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+    @else {
+        <p class="no-records">No employees found.</p>
+    }
+
+</div>

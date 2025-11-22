@@ -1,0 +1,60 @@
+.home-wrapper {
+  font-family: Inter, system-ui, sans-serif;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  max-width: 650px;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #1d3557;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #1d3557;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #16324b;
+}
+
+.btn.secondary {
+  background: #e9ecef;
+  color: #1d3557;
+}
+
+.btn.secondary:hover {
+  background: #dfe3e6;
+}
