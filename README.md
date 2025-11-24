@@ -69,22 +69,32 @@ ng new employee-details
 cd .\employee-details\
 
 ng build   
+
 npx ng version
+
 npx ng build --verbose
+
 ng serve --open
 
 3. Create component
-ng generate component home 
+ng generate component home
+
 ng generate component employees 
+
 ng generate component contact 
+
 ng generate component header --standalone   
+
 ng generate component header 
+
 ng generate component employees-detail
    
-4. External Api call
+5. External Api call
 
 ng generate service services/employees-api/employees-api
  
 5. Create DTO 
 ng g interface models/employee-dto
+
 ng g interface models/contact-message-dto
+
